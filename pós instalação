@@ -42,3 +42,6 @@ xfce4-panel -r
 transmission-gtk
 vinagre
 conky*
+
+
+sed -i 's/\# \%wheel ALL=(ALL) ALL/\%wheel ALL=(ALL) ALL/' /etc/sudoers
