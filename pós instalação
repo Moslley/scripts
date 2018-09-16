@@ -1,0 +1,44 @@
+# deixar teclado br-abnt2 permanente
+
+localectl set-x11-keymap br abnt2
+
+# para que o tap to click do touchpad funcione
+
+xf86-input-libinput
+
+Mais infos: https://wiki.archlinux.org/index.php/Libinput#Installation
+
+# tamanho volume e bateria
+
+Editar/Criar o arquivo ~/.config/gtk-3.0/gtk.css
+
+#xfce4-clipman-plugin { padding: 4px; }
+#xfce4-power-manager-plugin { padding: 4px; }
+#pulseaudio-button * { -gtk-icon-transform: scale(.7); }
+
+# editar arquivo sudoers
+
+e descomentar a linha wheel
+
+# remover borda icones area de trabalho
+
+$ touch ~/.gtkrc-2.0
+$ mousepad ~/.gtkrc-2.0
+
+style "xfdesktop-icon-view" {
+XfdesktopIconView::label-alpha = 0
+}
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view" 
+
+reiniciar sessão
+
+# reiniciar xfce4
+
+xfce4-panel -r
+
+
+-- programas --
+
+transmission-gtk
+vinagre
+conky*
