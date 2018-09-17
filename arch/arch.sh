@@ -66,13 +66,13 @@ echo
 # export _boot
 # declare -x _boot
 
-echo -en "\n${_g}    Informe o NÚMERO da partição SWAP (INSIRA SOMENTE O NÚMERO, ex.: 2 para sda2):${_w} "
+echo -en "\n${_g}    Informe o número da sua partição SWAP (INSIRA SOMENTE O NÚMERO, ex.: 2 para sda2):${_w} "
 read -n 1 _swap
 _swap="/dev/sda${_swap}"
 export _swap
 declare -x _swap
 
-echo -en "\n${_g}    Informe o NÚMERO da partição ROOT (INSIRA SOMENTE O NÚMERO, ex.: 3 para sda2):${_w} "
+echo -en "\n${_g}    Informe o número da sua partição ROOT (INSIRA SOMENTE O NÚMERO, ex.: 3 para sda2):${_w} "
 read -n 1 _root
 _root="/dev/sda${_root}"
 export _root
